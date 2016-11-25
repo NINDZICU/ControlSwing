@@ -91,6 +91,19 @@ public class MyWindow extends JFrame {
                 Boolean gen= true;
                 int id = Integer.valueOf(data[data.length-1][0].toString());
                 System.out.println(id);
+                Object [][] data1 = new Object[id+1][5];
+                for (int i = 0; i < data.length ; i++) {
+                    for (int j = 0; j < 5; j++) {
+                        data1[i][j]=data[i][j];
+                    }
+                }
+                data1[id][0]=id+1;
+                data1[id][1]=name;
+                data1[id][2]=surname;
+                data1[id][3]=age;
+                data1[id][4]=gen;
+                data=data1;
+                repaint();
             }
         });
 
